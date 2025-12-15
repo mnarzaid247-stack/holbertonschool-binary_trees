@@ -40,7 +40,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	if (!binary_tree_is_full(tree))
+	if (binary_tree_is_full(tree) == 0)
 		return (0);
 	if (binary_tree_nodes(tree->left) == binary_tree_nodes(tree->right))
 		return (1);
